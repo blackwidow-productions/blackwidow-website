@@ -1,0 +1,146 @@
+/*
+  BLACKWIDOW - stylesheet
+  =======================
+  CSS works like this:
+
+     selector { property: value; }
+
+  "Find this thing on the page, and set this knob to this value."
+  Very much like: find the synth, turn the cutoff to 400.
+
+  Colours here are written as hex codes, e.g. #39e83f is the
+  venom green from your logo. Google "hex color picker" to
+  find any colour you like.
+*/
+
+/* ---- The whole page ---- */
+body {
+  background: #0c0f0c;              /* near-black with a hint of green */
+  color: #e8f0e8;                    /* off-white text */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;                         /* remove the browser's default gap around the page */
+  line-height: 1.6;                  /* breathing room between lines of text */
+}
+
+/* ---- Hero banner ---- */
+.hero {
+  text-align: center;
+  background: #000;
+}
+
+.hero-logo {
+  width: 100%;                       /* stretch the artwork the full width... */
+  max-width: 1100px;                 /* ...but never wider than this */
+  display: block;
+  margin: 0 auto;                    /* centre it */
+}
+
+/* ---- Sections (About, Music, Contact) ---- */
+section {
+  max-width: 760px;                  /* keep text lines a comfortable length */
+  margin: 0 auto;                    /* centre the column */
+  padding: 2.5rem 1.5rem;            /* space inside each section */
+}
+
+/* ---- Headings ---- */
+h2 {
+  color: #39e83f;                    /* venom green */
+  text-transform: uppercase;         /* BLACKWIDOW doesn't do lowercase */
+  letter-spacing: 3px;
+  border-bottom: 2px solid #2a3a2a;  /* thin line under each heading */
+  padding-bottom: 0.3em;
+  /* soft green glow, like the club lights in the artwork: */
+  text-shadow: 0 0 12px rgba(57, 232, 63, 0.5);
+}
+
+/* ---- Genre headings inside the Music section ---- */
+h3 {
+  color: #b06cff;                    /* the purple from the club lights */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 2em;                   /* gap above each genre */
+  margin-bottom: 0.5em;
+}
+
+/* ---- Links ---- */
+a {
+  color: #39e83f;
+}
+
+a:hover {                            /* :hover = while the mouse is over it */
+  color: #b06cff;                    /* flip to the purple from the lights */
+}
+
+/* ---- Track rows: mini logo + player side by side ---- */
+.track {
+  display: flex;                     /* lay the logo and player in a row */
+  align-items: center;               /* line them up vertically */
+  gap: 0.8rem;                       /* space between logo and player */
+  margin-bottom: 0.8rem;             /* gap between stacked tracks */
+}
+
+.track-art {
+  width: 56px;                       /* mini! */
+  height: 56px;
+  object-fit: cover;                 /* crop to fill the square instead of squashing */
+  border-radius: 8px;                /* rounded corners, like album art */
+  border: 1px solid #39e83f;         /* thin venom-green frame */
+  flex-shrink: 0;                    /* never let it get squeezed smaller */
+}
+
+/* ---- Track title + player column (sits to the right of the mini logo) ---- */
+.track-info {
+  flex: 1;                           /* take up all the remaining row width */
+  min-width: 0;                      /* lets it shrink on small phone screens */
+}
+
+.track-name {
+  margin: 0 0 0.3rem;                /* just a small gap above the player */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ---- The audio players ---- */
+audio {
+  width: 100%;                       /* fill the track-info column */
+  flex: 1;                           /* take up all the remaining row width */
+  min-width: 0;                      /* lets the player shrink on small phone screens */
+
+  /* The player itself is drawn by the browser, so we can't restyle
+     its buttons directly - but we CAN run the whole thing through
+     a colour filter, like putting a green gel over a stage light: */
+  color-scheme: dark;                /* ask the browser for its dark version first */
+  /* then tint it venom green (saturate = colour intensity,
+     brightness = how vivid, hue-rotate = which colour): */
+  filter: sepia(1) saturate(6) hue-rotate(85deg) brightness(1.6);
+  border-radius: 999px;              /* pill shape to match the TikTok button */
+}
+
+/* ---- The social links list ---- */
+.links {
+  list-style: none;                  /* remove the bullet points */
+  padding: 0;
+  display: flex;                     /* lay items in a row instead of a stack */
+  gap: 1.5rem;                       /* space between them */
+}
+
+.links a {
+  text-decoration: none;             /* no underline... */
+  border: 1px solid #39e83f;         /* ...box them in instead */
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;              /* fully rounded ends = pill shape */
+}
+
+.links a:hover {
+  background: #39e83f;               /* invert on hover: green pill... */
+  color: #0c0f0c;                    /* ...dark text */
+  border-color: #39e83f;
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #6a7a6a;                    /* dim grey-green, stays out of the way */
+  font-size: 0.85rem;
+}

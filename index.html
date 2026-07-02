@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+  BLACKWIDOW - official site
+  ==========================
+  This file is the CONTENT of your site (like the MIDI notes).
+  The colours and layout live in style.css (the instruments & effects).
+
+  Every tag comes in pairs: <h1>opens</h1> closes. Whatever sits
+  between them is what shows on the page.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the page scale properly on phones: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- The browser-tab title: -->
+  <title>BLACKWIDOW</title>
+
+  <!-- This line plugs in the stylesheet, like loading a preset: -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HERO: the big banner at the top ============ -->
+  <header class="hero">
+    <img src="images/blackwidow-logo.jpg" alt="BLACKWIDOW - DJ in a spider web" class="hero-logo">
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      BLACKWIDOW is a DJ and producer spinning everything from piano house
+      and soul to bounce house &mdash; plus original tracks made in the studio.
+      All the music is based on soul, and all of it is about turning
+      negatives into positives. Step into the web.
+    </p>
+  </section>
+
+  <!-- ============ MUSIC ============ -->
+  <section id="music">
+    <h2>Music</h2>
+
+    <!--
+      HOW THIS WORKS
+      ==============
+      Inside the "music" folder there is one folder per genre:
+
+        music/piano-house/
+        music/soul/
+        music/blackwidow-vibes/
+        music/bounce-house/
+
+      Drop MP3s into those folders, then change the filenames in the
+      <audio> lines below to match YOUR files exactly (including .mp3).
+
+      Each tune is one "track" block: a mini version of your logo
+      plus a player. Want more tunes in a genre? Copy a whole
+      <div class="track"> ... </div> block and paste it underneath.
+    -->
+
+    <h3>Piano House</h3>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">My Soul Is Music (Soul of Life)</p>
+        <audio controls src="music/piano-house/my-soul-is-music-soul-of-life.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Music Soul Soul</p>
+        <audio controls src="music/piano-house/music-soul-soul.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Soul Is Rhythm</p>
+        <audio controls src="music/piano-house/soul-is-rhythm.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Soul In It</p>
+        <audio controls src="music/piano-house/soul-in-it.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Soul In The Music</p>
+        <audio controls src="music/piano-house/soul-in-the-music.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">When I Hear That Soul</p>
+        <audio controls src="music/piano-house/when-i-hear-that-soul.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Sound of My Soul</p>
+        <audio controls src="music/piano-house/sound-of-my-soul.mp3"></audio>
+      </div>
+    </div>
+
+    <h3>Soul</h3>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">I Didn't Lose My Soul</p>
+        <audio controls src="music/soul/i-didnt-lose-my-soul.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Wall of Memories</p>
+        <audio controls src="music/soul/wall-of-memories.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Paper Remembers You</p>
+        <audio controls src="music/soul/paper-remembers-you.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Keep on That Road</p>
+        <audio controls src="music/soul/keep-on-that-road.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">My Love</p>
+        <audio controls src="music/soul/my-love.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">I Miss You So Much</p>
+        <audio controls src="music/soul/i-miss-you-so-much.mp3"></audio>
+      </div>
+    </div>
+
+    <h3>Blackwidow Vibes</h3>
+    <!--
+      These three are real tunes! Each track block now has a
+      title line (.track-name) above its player.
+    -->
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Blackwidow Vision</p>
+        <audio controls src="music/blackwidow-vibes/blackwidow-vision.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Black Widow Grin</p>
+        <audio controls src="music/blackwidow-vibes/black-widow-grin.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Black Widow Web</p>
+        <audio controls src="music/blackwidow-vibes/black-widow-web.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Music Is Soul</p>
+        <audio controls src="music/blackwidow-vibes/music-is-soul.mp3"></audio>
+      </div>
+    </div>
+
+    <h3>Bounce House</h3>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Bassline Baseline</p>
+        <audio controls src="music/bounce-house/bassline-baseline.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Bell Drop</p>
+        <audio controls src="music/bounce-house/bell-drop.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Darkness Dancefloor</p>
+        <audio controls src="music/bounce-house/darkness-dancefloor.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Rhythm and Soul</p>
+        <audio controls src="music/bounce-house/rhythm-and-soul.mp3"></audio>
+      </div>
+    </div>
+    <div class="track">
+      <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
+      <div class="track-info">
+        <p class="track-name">Same Thing Tonight</p>
+        <audio controls src="music/bounce-house/same-thing-tonight.mp3"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / LINKS ============ -->
+  <section id="contact">
+    <h2>Contact &amp; Links</h2>
+
+    <!-- "mailto:" makes clicking the link open the visitor's email app -->
+    <p>Bookings: <a href="mailto:jbrb8106@googlemail.com">jbrb8106@googlemail.com</a></p>
+
+    <ul class="links">
+      <li><a href="https://www.tiktok.com/@blackwidow0706">TikTok</a></li>
+    </ul>
+  </section>
+
+  <!-- ============ FOOTER: the small print at the bottom ============ -->
+  <footer>
+    <p>&copy; 2026 BLACKWIDOW &mdash; caught in the web 🕷️</p>
+  </footer>
+
+</body>
+</html>
