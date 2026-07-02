@@ -242,7 +242,29 @@
   <!-- ============ FOOTER: the small print at the bottom ============ -->
   <footer>
     <p>&copy; 2026 BLACKWIDOW &mdash; caught in the web 🕷️</p>
+    <!-- The visitor count gets filled in by the JavaScript below: -->
+    <p id="visit-count"></p>
   </footer>
+
+  <!--
+    Your first JavaScript! This runs every time someone opens the page:
+    1. fetch(...) calls a free counting service and says "add one"
+    2. the service replies with the new total
+    3. we write that number into the empty <p id="visit-count"> above
+    If the counting service is ever down, the catch(...) line means
+    the page just quietly shows no counter instead of breaking.
+  -->
+  <script>
+    fetch("https://api.counterapi.dev/v1/blackwidow0706-site/visits/up")
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        // pick the right word: 1 "visitor", otherwise "visitors"
+        var word = data.count === 1 ? "visitor" : "visitors";
+        document.getElementById("visit-count").textContent =
+          data.count + " " + word + " caught in the web";
+      })
+      .catch(function () { /* counter unavailable - show nothing */ });
+  </script>
 
 </body>
 </html>
