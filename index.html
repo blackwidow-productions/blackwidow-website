@@ -227,6 +227,32 @@
     </div>
   </section>
 
+  <!-- ============ LEAVE A MESSAGE ============ -->
+  <section id="messages">
+    <h2>Leave a Message</h2>
+    <p>Heard something you liked? Tell me &mdash; messages come straight to my inbox.</p>
+
+    <!--
+      A form collects what the visitor types, and on Send it posts
+      everything to formsubmit.co - a free relay that emails it to me.
+      The hidden inputs are settings for that service, not things
+      the visitor sees.
+    -->
+    <form action="https://formsubmit.co/jbrb8106@googlemail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from the BLACKWIDOW site">
+      <!-- after sending, bring the visitor back to the site: -->
+      <input type="hidden" name="_next" value="https://blackwidow-productions.github.io/blackwidow-website/?sent=yes">
+
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email (optional)">
+      <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
+      <button type="submit">Send it into the web</button>
+    </form>
+
+    <!-- shown only after a successful send (see script below): -->
+    <p id="sent-confirmation" hidden>&#128154; Message sent &mdash; thank you!</p>
+  </section>
+
   <!-- ============ CONTACT / LINKS ============ -->
   <section id="contact">
     <h2>Contact &amp; Links</h2>
@@ -264,6 +290,13 @@
           data.count + " " + word + " caught in the web";
       })
       .catch(function () { /* counter unavailable - show nothing */ });
+
+    // If the address ends in "?sent=yes", the visitor just came back
+    // from sending a message - so un-hide the thank-you line:
+    if (window.location.search.indexOf("sent=yes") !== -1) {
+      document.getElementById("sent-confirmation").hidden = false;
+      document.getElementById("messages").scrollIntoView();
+    }
   </script>
 
 </body>

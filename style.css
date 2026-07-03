@@ -137,6 +137,50 @@ audio {
   border-color: #39e83f;
 }
 
+/* ---- The message form ---- */
+form {
+  display: flex;
+  flex-direction: column;            /* stack the boxes top to bottom */
+  gap: 0.8rem;                       /* space between them */
+}
+
+input, textarea {
+  background: #101510;               /* slightly lighter than the page */
+  border: 1px solid #2a3a2a;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  color: #e8f0e8;                    /* visitors type in off-white */
+  font-family: inherit;              /* same font as the rest of the page */
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {        /* :focus = while you're typing in it */
+  border-color: #39e83f;             /* light up venom green */
+  outline: none;
+}
+
+form button {
+  background: #39e83f;
+  color: #0c0f0c;
+  border: none;
+  border-radius: 999px;              /* pill, matching the TikTok button */
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;                   /* hand cursor on hover */
+  align-self: flex-start;            /* don't stretch full width */
+}
+
+form button:hover {
+  background: #b06cff;               /* flip to purple, like the links */
+}
+
+#sent-confirmation {
+  color: #39e83f;
+  font-weight: bold;
+}
+
 /* ---- Footer ---- */
 footer {
   text-align: center;
