@@ -282,6 +282,28 @@
     <p id="sent-confirmation" hidden>&#128154; Message sent &mdash; thank you!</p>
   </section>
 
+  <!-- ============ MESSAGE BOARD (public comments via Disqus) ============ -->
+  <section id="board">
+    <h2>Message Board</h2>
+    <p>Say it loud &mdash; messages here stay on the board for everyone.</p>
+
+    <!-- Disqus fills this empty box with the whole comment section: -->
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = "https://blackwidow-productions.github.io/blackwidow-website/";
+        this.page.identifier = "blackwidow-home";
+      };
+      (function () {
+        var d = document, s = d.createElement("script");
+        s.src = "https://blackwidow-productions.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>The message board needs JavaScript turned on.</noscript>
+  </section>
+
   <!-- ============ CONTACT / LINKS ============ -->
   <section id="contact">
     <h2>Contact &amp; Links</h2>
