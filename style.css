@@ -158,6 +158,23 @@ audio {
   border-color: #39e83f;
 }
 
+/* ---- The Videos section: same grid trick as the music ---- */
+#videos {
+  max-width: 1000px;
+}
+
+.vids {
+  display: grid;
+  grid-template-columns: 1fr 1fr;    /* two videos side by side */
+  gap: 1.5rem 3rem;
+}
+
+@media (max-width: 720px) {          /* stack on phones */
+  .vids {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Video players ---- */
 video {
   width: 100%;                       /* fill the space available... */
