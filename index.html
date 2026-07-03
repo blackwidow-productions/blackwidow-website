@@ -266,6 +266,11 @@
       <input type="hidden" name="_subject" value="New message from the BLACKWIDOW site">
       <!-- after sending, bring the visitor back to the site: -->
       <input type="hidden" name="_next" value="https://blackwidow-productions.github.io/blackwidow-website/?sent=yes">
+      <!-- skip the "I'm not a robot" puzzle page - it was losing real messages: -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- invisible bot trap: humans never see this box, so if it comes
+           back filled in, the sender was a spam robot and gets binned -->
+      <input type="text" name="_honey" style="display:none">
 
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Your email (optional)">
