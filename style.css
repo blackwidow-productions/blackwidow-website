@@ -53,6 +53,25 @@ h2 {
   text-shadow: 0 0 12px rgba(57, 232, 63, 0.5);
 }
 
+/* ---- The Music section is wider so two genres fit side by side ---- */
+#music {
+  max-width: 1000px;
+}
+
+/* ---- The genre grid: 2 columns on big screens ---- */
+.genres {
+  display: grid;                     /* grid = rows and columns layout */
+  grid-template-columns: 1fr 1fr;    /* two equal-width columns */
+  gap: 0 3rem;                       /* horizontal breathing room between columns */
+}
+
+/* On narrow screens (phones) fall back to one column: */
+@media (max-width: 720px) {
+  .genres {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Genre headings inside the Music section ---- */
 h3 {
   color: #b06cff;                    /* the purple from the club lights */
@@ -80,8 +99,8 @@ a:hover {                            /* :hover = while the mouse is over it */
 }
 
 .track-art {
-  width: 56px;                       /* mini! */
-  height: 56px;
+  width: 38px;                       /* mini! */
+  height: 38px;
   object-fit: cover;                 /* crop to fill the square instead of squashing */
   border-radius: 8px;                /* rounded corners, like album art */
   border: 1px solid #39e83f;         /* thin venom-green frame */
@@ -95,9 +114,10 @@ a:hover {                            /* :hover = while the mouse is over it */
 }
 
 .track-name {
-  margin: 0 0 0.3rem;                /* just a small gap above the player */
+  margin: 0 0 0.2rem;                /* just a small gap above the player */
   font-weight: bold;
   letter-spacing: 1px;
+  font-size: 0.85rem;                /* smaller, tidier titles */
 }
 
 /* ---- The audio players ---- */
@@ -105,6 +125,7 @@ audio {
   width: 100%;                       /* fill the track-info column */
   flex: 1;                           /* take up all the remaining row width */
   min-width: 0;                      /* lets the player shrink on small phone screens */
+  height: 32px;                      /* slimmer player bar */
 
   /* The player itself is drawn by the browser, so we can't restyle
      its buttons directly - but we CAN run the whole thing through
