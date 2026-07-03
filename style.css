@@ -137,6 +137,17 @@ audio {
   border-color: #39e83f;
 }
 
+/* ---- Video players ---- */
+video {
+  width: 100%;                       /* fill the space available... */
+  max-width: 400px;                  /* ...but phone-shaped videos stay phone-sized */
+  display: block;
+  border-radius: 12px;               /* rounded corners like the album art */
+  border: 1px solid #2a3a2a;
+  margin-bottom: 1.5rem;             /* gap below each video */
+  background: #000;                  /* black behind the picture while loading */
+}
+
 /* ---- The message form ---- */
 form {
   display: flex;
