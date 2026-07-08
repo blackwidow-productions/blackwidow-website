@@ -57,6 +57,16 @@
   <section id="music">
     <h2>Music</h2>
 
+    <!-- Mini menu for jumping straight to a genre - works exactly
+         like the big menu at the top: each href="#..." matches an
+         id="..." on one of the genre boxes below. -->
+    <nav class="genre-menu">
+      <a href="#soul">Soul</a>
+      <a href="#piano-house">Piano House</a>
+      <a href="#blackwidow-vibes">Blackwidow Vibes</a>
+      <a href="#bounce-house">Bounce House</a>
+    </nav>
+
     <!--
       HOW THIS WORKS
       ==============
@@ -82,7 +92,7 @@
     -->
     <div class="genres">
 
-    <div class="genre">
+    <div class="genre" id="soul">
     <h3>Soul</h3>
     <div class="track">
       <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
@@ -129,7 +139,7 @@
 
     </div>
 
-    <div class="genre">
+    <div class="genre" id="piano-house">
     <h3>Piano House</h3>
     <div class="track">
       <img src="images/blackwidow-logo.jpg" alt="" class="track-art">
@@ -183,7 +193,7 @@
 
     </div>
 
-    <div class="genre">
+    <div class="genre" id="blackwidow-vibes">
     <h3>Blackwidow Vibes</h3>
     <!--
       These three are real tunes! Each track block now has a
@@ -220,7 +230,7 @@
 
     </div>
 
-    <div class="genre">
+    <div class="genre" id="bounce-house">
     <h3>Bounce House</h3>
     <div class="track">
       <img src="images/blackwidow-logo.jpg" alt="" class="track-art">

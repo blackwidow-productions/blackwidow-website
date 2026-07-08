@@ -67,7 +67,8 @@ section {
   max-width: 760px;                  /* keep text lines a comfortable length */
   margin: 0 auto;                    /* centre the column */
   padding: 2.5rem 1.5rem;            /* space inside each section */
-  scroll-margin-top: 3.5rem;         /* when the menu jumps here, stop below the sticky bar */
+  scroll-margin-top: 5.5rem;         /* when the menu jumps here, stop below the sticky bar
+                                        (roomy enough even when the bar wraps to 2 rows on phones) */
 }
 
 /* ---- Headings ---- */
@@ -84,6 +85,36 @@ h2 {
 /* ---- The Music section is wider so two genres fit side by side ---- */
 #music {
   max-width: 1000px;
+}
+
+/* ---- Genre mini-menu at the top of the Music section ---- */
+.genre-menu {
+  display: flex;
+  flex-wrap: wrap;                   /* wrap onto extra rows on phones */
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.genre-menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #b06cff;                    /* purple, matching the genre headings */
+  border: 1px solid #b06cff;         /* pill outline, like the TikTok button */
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+}
+
+.genre-menu a:hover {
+  background: #b06cff;               /* invert on hover: purple pill... */
+  color: #0c0f0c;                    /* ...dark text */
+}
+
+/* When a genre link jumps here, stop below the sticky menu bar: */
+.genre {
+  scroll-margin-top: 5.5rem;
 }
 
 /* ---- The genre grid: 2 columns on big screens ---- */
