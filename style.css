@@ -14,6 +14,10 @@
 */
 
 /* ---- The whole page ---- */
+html {
+  scroll-behavior: smooth;           /* menu clicks glide to the section instead of jumping */
+}
+
 body {
   background: #0c0f0c;              /* near-black with a hint of green */
   color: #e8f0e8;                    /* off-white text */
@@ -35,11 +39,35 @@ body {
   margin: 0 auto;                    /* centre it */
 }
 
+/* ---- Sticky menu bar ---- */
+.menu {
+  position: sticky;                  /* scrolls with the page until it hits... */
+  top: 0;                            /* ...the very top, then stays pinned there */
+  z-index: 10;                       /* keep it on top of everything else */
+  display: flex;                     /* lay the links in a row */
+  justify-content: center;           /* centred across the bar */
+  flex-wrap: wrap;                   /* let links wrap to a second row on tiny phones */
+  gap: 0.3rem 1.8rem;                /* space between the links */
+  padding: 0.8rem 1rem;
+  background: rgba(12, 15, 12, 0.92);/* the page colour, slightly see-through */
+  backdrop-filter: blur(6px);        /* frost whatever scrolls behind it */
+  border-bottom: 1px solid #2a3a2a;  /* same thin line as under the headings */
+}
+
+.menu a {
+  text-decoration: none;             /* no underlines */
+  text-transform: uppercase;         /* matching the headings */
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
 /* ---- Sections (About, Music, Contact) ---- */
 section {
   max-width: 760px;                  /* keep text lines a comfortable length */
   margin: 0 auto;                    /* centre the column */
   padding: 2.5rem 1.5rem;            /* space inside each section */
+  scroll-margin-top: 3.5rem;         /* when the menu jumps here, stop below the sticky bar */
 }
 
 /* ---- Headings ---- */
